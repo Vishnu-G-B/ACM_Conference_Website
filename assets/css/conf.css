@@ -1,0 +1,160 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+}
+
+section {
+    overflow: hidden;
+    display: block;
+    min-height: 700px;
+}
+
+.home {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(0, 0, 0, 0.2); */
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.scrolled {
+    background-color: white !important;
+}
+
+.navbar-nav .nav-item {
+    padding: 0rem 1rem;
+    /* margin-top: 1rem; */
+    font-weight: 500;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #0031B0 !important;
+}
+
+.hero-text {
+    color: white;
+    margin-top: 30rem;
+}
+
+.hero-text h1 {
+    font-weight: 800;
+    font-size: 7.5rem;
+    margin-bottom: -1rem;
+}
+
+.about h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #0031B0;
+}
+
+.about p {
+    font-size: 1.4rem;
+    color: #279AF1;
+}
+
+.about img {
+    width: 80%;
+}
+
+.mitb img {
+    width: 60%;
+}
+
+.mitb h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0031B0;
+}
+
+.mitb p {
+    font-size: 1.4rem;
+    color: #279AF1;
+}
+
+.organisers {
+    background-color: #279AF1;
+    height: 500px;
+}
+
+.organisers .main-gallery {
+    background: #279AF1;
+    height: 75%;
+}
+  
+.gallery-cell {
+    width: 40%;
+    height: 350px;
+    margin-right: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0);
+}
+
+.gallery-cell .left-img .img-wrap img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+    .organisers {
+        background-color: #279AF1;
+        height: 400px;
+    }
+    
+    .organisers .main-gallery {
+        background: #279AF1;
+        height: 75%;
+    }
+      
+    .gallery-cell {
+        width: 66%;
+        height: 250px;
+        margin-right: 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        vertical-align: center;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0);
+    }
+    
+}
+
+.spacer {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(../img/layered-waves-haikei.svg);
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
