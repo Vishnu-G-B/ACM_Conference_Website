@@ -89,7 +89,7 @@ function setFontSize() {
     const textElements = document.querySelectorAll('.text');
     
     textElements.forEach(element => {
-      element.style.fontSize = baseFontSize * 1.65 + 'px'; 
+      element.style.fontSize = baseFontSize * 1.4 + 'px'; 
     });
   }
 
