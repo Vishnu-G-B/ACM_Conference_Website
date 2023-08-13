@@ -42,7 +42,7 @@ section {
 }
 
 .layer1 {
-    background-image: url(../img/layered-waves-haikei.svg);
+    background-image: url(../img/layered-waves-haikei-dark.svg);
 }
 
 .layer2 {
@@ -119,12 +119,12 @@ section {
 }
 
 .organisers {
-    background-color: #279AF1;
+    background-color: #0434b4;
     height: 500px;
 }
 
 .organisers .main-gallery {
-    background: #279AF1;
+    background: #0434b4;
     height: 75%;
 }
 
