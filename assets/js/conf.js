@@ -65,3 +65,33 @@ $(window).scroll(function() {
 // }),
 
 console.log('im alive')
+
+// function updateDivClasses() {
+//     var div = document.getElementById('dynamicDiv');
+//     var width = window.innerWidth;
+  
+//     if (width <= 767) {
+//       div.classList.remove('default-style');
+//       div.classList.add('small-screen-style');
+//     } else {
+//       div.classList.remove('small-screen-style');
+//       div.classList.add('default-style');
+//     }
+//   }
+  
+//   // Call the function on page load and when the window is resized
+//   window.onload = updateDivClasses;
+//   window.addEventListener('resize', updateDivClasses);
+
+function setFontSize() {
+    const screenWidth = window.innerWidth;
+    const baseFontSize = screenWidth / 100; // 1% of the screen width
+    const textElements = document.querySelectorAll('.text');
+    
+    textElements.forEach(element => {
+      element.style.fontSize = baseFontSize * 1.65 + 'px'; // Adjust factor as needed
+    });
+  }
+  
+  window.onload = setFontSize;
+  window.addEventListener('resize', setFontSize);
