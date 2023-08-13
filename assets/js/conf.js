@@ -85,13 +85,40 @@ console.log('im alive')
 
 function setFontSize() {
     const screenWidth = window.innerWidth;
-    const baseFontSize = screenWidth / 100; // 1% of the screen width
+    const baseFontSize = screenWidth / 100; 
     const textElements = document.querySelectorAll('.text');
     
     textElements.forEach(element => {
-      element.style.fontSize = baseFontSize * 1.65 + 'px'; // Adjust factor as needed
+      element.style.fontSize = baseFontSize * 1.65 + 'px'; 
     });
   }
+
+function updateSVGViewBox() {
+    const svg = document.getElementById('visual');
+    const svgWidth = svg.getAttribute('width');
+    const svgHeight = svg.getAttribute('height');
+
   
-  window.onload = setFontSize;
-  window.addEventListener('resize', setFontSize);
+    const viewBoxValue = `0 0 ${svgWidth} ${svgHeight*5.5}`;
+    svg.setAttribute('viewBox', viewBoxValue);
+}
+
+function removeElement() {
+    const screenWidth = window.innerWidth;
+    const elementToRemove = document.getElementById('removable');
+  
+    if (screenWidth < 768) { 
+      if (elementToRemove) {
+        elementToRemove.remove(); 
+      }
+    }
+}
+
+window.onload = setFontSize;
+removeElement();
+updateSVGViewBox();
+  
+ 
+window.addEventListener('resize', removeElement);
+window.addEventListener('resize', setFontSize);
+window.addEventListener('resize', updateSVGViewBox);

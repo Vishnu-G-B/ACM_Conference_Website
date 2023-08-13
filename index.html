@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+    <script src="https://kit.fontawesome.com/631b98025b.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS -->
     <link
@@ -93,57 +94,10 @@
       </div>
     </section>
 
-    <!-- <section class="about d-flex flex-wrap align-content-center" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1>ICCVAI 2024</h1>
-            <p>
-              The International Conference for Computer Vision and Artificial
-              Intelligence (IICVAI 2024) is a premier annual conference focused
-              on Computer Vision and Artificial Intelligence which will be held
-              on June 2024 at Manipal Institute of Technology, Bengaluru (MIT
-              Bengaluru) <br /><br />
-              IICVAI provides a great platform to students, academic,
-              researchers and industry persons.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img src="assets/img/conflogoicon.svg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mitb d-flex flex wrap align-content-center" id="mitb">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="assets/img/mahelogo.png" alt="" />
-          </div>
-          <div class="col-lg-6">
-            <h1>About MITB, Bengaluru</h1>
-            <p>
-              The Garden City of India, Bengaluru, is now home to a new
-              engineering institution, “MIT Bengaluru”, the latest constituent
-              unit of Manipal Academy of Higher Education (MAHE). <br />
-              <br />
-              MAHE is recognized as a deemed-to-be university since 1993 and has
-              been accorded the status of Institute of Eminence (IoE) by MHRD,
-              Government of India. Over the years, MAHE has transformed itself
-              into a centre of excellence that offers knowledge to about 33000+
-              students from 67+ nations, ably supported by 2500 faculty and
-              almost 10000 support and service staff.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <section class="content-section">
+    <section class="content-section" id="about">
       <div class="row">
         
-        <div class="img-container">
+        <div class="img-container conf-logo">
           <img src="assets/img/conflogoicon.svg" alt="Conference_img" class="image">
         </div>
 
@@ -175,10 +129,10 @@
       </div>
     </section>
 
-    <div class="spacer layer1 flip" style=" margin-bottom: -20px;"></div>
+    <div class="spacer layer1 flip" style=" margin-bottom: -20px;" id="organisers"></div>
 
     <!-- Organizers Carousel Start -->
-    <div class="organisers" id="organisers">
+    <div class="organisers" >
       <div class="hero-text text-center" style="margin-top: 0">
         <h2
           class="title"
@@ -291,18 +245,18 @@
     <!-- Organizers Carousel End -->
     <div class="spacer layer1"></div>
 
-    <section class="home last-section" id="schedule">
+    <section class=" last-section" id="schedule">
 
       <div class="schedule-img">
-        <img src="assets/img/schedule.png">
+        <img src="assets/img/schedule-removebg.png">
       </div>
 
-      <div class="animated-blob">
+      <div class="animated-blob" id="removable">
         <svg
           id="visual"
           viewBox="0 0 500 500"
-          width="500"
-          height="500"
+          width="30vw"
+          height="70vh"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           version="1.1"
@@ -334,6 +288,83 @@
         );
         tween.start();
       </script>
+    </section>
+
+    <div class="spacer-footer layer2"></div>
+
+    <section class="bg-drkblue">
+      
+      <footer class="text-center text-white">
+        
+        <div class="container">
+          
+          <section class="mt-3" style="min-height: 0;">
+            
+            <div class="row text-center d-flex justify-content-center pt-5">
+              
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#" class="text-white" style="text-decoration: none;">Home</a>
+                </h6>
+              </div>
+              
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#about" class="text-white" style="text-decoration: none;">About Us</a>
+                </h6>
+              </div>
+              
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#organisers" class="text-white" style="text-decoration: none;">Organisers</a>
+                </h6>
+              </div>
+              
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#schedule" class="text-white" style="text-decoration: none;">Schedule</a>
+                </h6>
+              </div>
+              
+            </div>
+          </section>
+
+          <hr />
+
+          <section class="text-center mb-2 mt-1" style="min-height: 0;">
+            <p class="d-flex justify-content-center align-items-center">
+              <span class="me-3">Submit your Research Papers Now!</span>
+              <button type="button" class="btn btn-outline-light btn-rounded">
+                Sign up!
+              </button>
+            </p>
+          </section>
+          
+          <section class="text-center mb-5" style="min-height: 32px;">
+            <a href="https://www.threads.net/@acm_mitb" target="_blank" class="text-white me-4 pt-5" style="text-decoration: none; z-index:11;">
+              <i class="fa-brands fa-threads" style="font-size: 2rem;"></i>
+            </a>
+            <a href="mailto:acm.mitblr@manipal.edu" target="_blank" class="text-white me-4" style="text-decoration: none;">
+              <i class="fa-solid fa-envelope" style="font-size: 2rem;"></i>
+            </a>
+            <a href="https://instagram.com/acm_mitb?igshid=MjEwN2IyYWYwYw==" target="_blank" class="text-white me-4" style="text-decoration: none;">
+              <i class="fa fa-instagram" style="font-size: 2rem;"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/mitb-acm-student-chapter/" target="_blank" class="text-white me-4" style="text-decoration: none;">
+              <i class="fa fa-linkedin" style="font-size: 2rem;"></i>
+            </a>
+          </section>
+        </div>
+
+        <div
+            class="text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+            >
+          <a href="https://india.acm.org/" target="_blank" class="text-white" style="text-decoration: none;">© ACM-India</a>; All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
     </section>
 
 
