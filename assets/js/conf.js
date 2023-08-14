@@ -88,9 +88,17 @@ function setFontSize() {
     const baseFontSize = screenWidth / 100; 
     const textElements = document.querySelectorAll('.text');
     
-    textElements.forEach(element => {
-      element.style.fontSize = baseFontSize * 1.4 + 'px'; 
-    });
+    if (screenWidth >789 ){
+      textElements.forEach(element => {
+        element.style.fontSize = baseFontSize * 1.4 + 'px'; 
+      });
+    }
+
+    if (screenWidth <768) {
+      textElements.forEach(element => {
+        element.style.fontSize = baseFontSize * 4 + 'px'; 
+      });
+    }
   }
 
 function updateSVGViewBox() {

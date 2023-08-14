@@ -82,10 +82,52 @@ section {
     margin-top: 30rem;
 }
 
-.hero-text h1 {
+.hero-text{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.landing-title {
     font-weight: 800;
-    font-size: 7.5rem;
-    margin-bottom: -1rem;
+    font-size: 8vw;
+    display: inline-block;
+    line-height: 1;
+}
+
+.title-full {
+    font-weight: 400;
+    font-size: 2vw;
+    flex-wrap: wrap;
+    display: inline-block;
+    line-height: 1;
+}
+
+.text-loc {
+    font-weight: 500;
+    font-size: 2.5vw;
+    flex-wrap: wrap;
+    display: inline-block;
+    line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+    .landing-title {
+        font-size: 11vw;
+    }
+
+    .title-full {
+        font-size: 3.8vw;
+    }
+
+    .text-loc {
+        font-size: 4vw;
+    }
+    
+    
+
+
 }
 
 .about h1 {
@@ -236,7 +278,7 @@ section {
 }
 
 .image {
-    width: 40vw;
+    width: 30vw;
     height: auto;
 }
 
@@ -255,8 +297,8 @@ section {
 }
 
 .img-container.logo img{
-    width:50vw;
-    height: 90vh;
+    width:35vw;
+    height: 65vh;
 }
 
 p.text {
@@ -268,6 +310,12 @@ p.text {
 }
 
 .header{
+    color: #0031B0;
+    font-weight: 800;
+    font-size: 5vw;
+}
+
+.header-larger {
     color: #0031B0;
     font-weight: 800;
     font-size: 5.5vw;
@@ -304,6 +352,10 @@ p.text {
         position: absolute;
         bottom: 0;
         right: 50%;
+    }
+
+    .organisers h2.title {
+        font-size: 8vw !important;
     }
 }
 
