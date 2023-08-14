@@ -114,15 +114,15 @@ section {
 
 @media screen and (max-width: 767px) {
     .landing-title {
-        font-size: 11vw;
+        font-size: 14vw;
     }
 
     .title-full {
-        font-size: 3.8vw;
+        font-size: 4.8vw;
     }
 
     .text-loc {
-        font-size: 4vw;
+        font-size: 6vw;
     }
     
     
@@ -277,6 +277,15 @@ section {
     margin: 20px 0;
 }
 
+.row-mobile-reverse {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
 .image {
     width: 30vw;
     height: auto;
@@ -330,6 +339,11 @@ p.text {
         flex-wrap: wrap;
     }
 
+    .row-mobile-reverse {
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
     p.text {
         margin-left: 0;
     }
@@ -340,6 +354,7 @@ p.text {
         min-width: 245px;
         min-height: 350px;
         height: auto;
+
 
     }
 
@@ -356,6 +371,14 @@ p.text {
 
     .organisers h2.title {
         font-size: 8vw !important;
+    }
+
+    .row-mobile-reverse .img-container.logo {
+        order: 1;
+    }
+
+    .row-mobile-reverse .para {
+        order: 2;
     }
 }
 
