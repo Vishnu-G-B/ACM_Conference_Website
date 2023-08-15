@@ -28,7 +28,7 @@ section {
     aspect-ratio: 960/100;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
 }
 
@@ -36,7 +36,7 @@ section {
     aspect-ratio: 960/50;
     width: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     z-index: 11;
 }
@@ -68,13 +68,18 @@ section {
 }
 
 .navbar-nav .nav-item {
-    padding: 0rem 1rem;
+    padding: 0rem 0.75rem;
     /* margin-top: 1rem; */
     font-weight: 500;
 }
 
 .navbar-nav .nav-item .nav-link {
     color: #0031B0 !important;
+}
+
+.navbar-brand img {
+    width: 18vw;
+    height: auto;
 }
 
 .hero-text {
@@ -124,9 +129,10 @@ section {
     .text-loc {
         font-size: 6vw;
     }
-    
-    
 
+    .hero-text {
+        margin-top: 45rem;
+    }
 
 }
 
@@ -162,7 +168,7 @@ section {
 
 .organisers {
     background-color: #0434b4;
-    height: 500px;
+    height: 250px;
 }
 
 .organisers .main-gallery {
@@ -171,18 +177,56 @@ section {
 }
 
 .gallery-cell {
-    width: 40%;
-    height: 350px;
-    margin-right: 10px;
+    width: 20%;
+    height: 150px;
     border-radius: 20px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin: 20px;
+    margin: 0 5px;
+}
+
+.gallery-cell .company-img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.company1 { 
+    background-image: url(../img/Company_logos/tcs_logo-2.jpg);
+}
+
+.company2 {
+    background-image: url(../img/Company_logos/persistent_logo.jpg);
+}
+
+.company3 {
+    background-image: url(../img/Company_logos/google_logo_dark.jpg);
+}
+
+.company4 {
+    background-image: url(../img/Company_logos/cisco_logo_dark.jpg);
+}
+
+.company5 {
+    background-image: url(../img/Company_logos/carelon_global_logo.png);
+    background-size: contain;
+}
+
+.company6 {
+    background-image: url(../img/Company_logos/Dell_Technologies_Logo_dark.png);
+}
+
+.company7 {
+    background-image: url(../img/Company_logos/IBM_logo_dark.jpg);
+}
+
+.company8 {
+    background-image: url(../img/Company_logos/14_trees_logo.jpg);
 }
 
 .card-image {
@@ -428,4 +472,26 @@ p.text {
 section.bg-drkblue {
     background-color: #002280;
     min-height: 300px;
+}
+
+/* NAVBAR STYLES */
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.navbar-brand {
+    margin-right: 0;
+    margin-left: 4vw;
+}
+
+.dropdown-menu {
+    z-index: 99;
+}
+
+.hero-container {
+    position: relative;
 }

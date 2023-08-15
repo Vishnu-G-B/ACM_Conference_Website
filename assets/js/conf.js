@@ -125,7 +125,7 @@ function removeElement() {
 window.onload = setFontSize;
 removeElement();
 updateSVGViewBox();
-  
+
  
 window.addEventListener('resize', removeElement);
 window.addEventListener('resize', setFontSize);

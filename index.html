@@ -11,8 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
-    <script src="https://kit.fontawesome.com/631b98025b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script> <!-- KUTE Animation Library -->
+    <script src="https://kit.fontawesome.com/631b98025b.js" crossorigin="anonymous"></script> <!-- Font Awesome Icon Kit -->
 
     <!-- Bootstrap CSS -->
     <link
@@ -33,16 +33,13 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
+      <div class="container-fluid justify-content-between">
         <a href="#home" class="navbar-brand" id="logo">
           <img src="./assets/img/conflogo.png" alt="logo" width="200" />
         </a>
 
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <div class="align">
               <li class="nav-item">
                 <a href="#home" class="nav-link">Home</a>
@@ -56,12 +53,46 @@
               <li class="nav-item">
                 <a href="#schedule" class="nav-link">Schedule</a>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CFP
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Call for Papers</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Important Dates</a></li>
+                  <li><a class="dropdown-item" href="#">Theme of ICCVAI24</a></li>
+                  <li><a class="dropdown-item" href="#">Instruction to Authors</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Committees
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item " href="#">TPC - Technical Progress Committee</a></li>
+                  <li><a class="dropdown-item " href="#">Advisory Committee</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item " href="#">Organizing Committee</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Speaker
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Keynote Speaker </a></li>
+                  <li><a class="dropdown-item" href="#">Invited Speaker</a></li>
+                </ul>
+              </li>
+              
               <li class="nav-item">
                 <a href="#submit" class="nav-link">
                   <button
                     type="button"
                     class="btn btn-primary"
-                    style="margin-left: 2rem"
                   >
                     Submit Paper
                   </button>
@@ -75,7 +106,7 @@
 
     <section class="home bg-image" id="home" style="background-image: url(assets/img/mitb.jpg)">
       <div class="container">
-        <div class="color-overlay d-flex justify-content-start align-items-center">
+        <div class="color-overlay d-flex justify-content-start align-items-center hero-container">
           <div class="hero-text">
             <span class="landing-title">ICCVAI 2024</span>
             <span class="title-full">International Conference for Computer Vision and Artificial Intelligence</span>
@@ -124,18 +155,9 @@
 
     <!-- Organizers Carousel Start -->
     <div class="organisers" >
-      <div class="hero-text text-center" style="margin-top: 0">
-        <h2
-          class="title"
-          style="
-            font-size: 48px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-          "
-        >
-         ORGANISERS
+      <div class=" text-center" style="margin-top: 0">
+        <h2 class="title" style="font-size: 48px; padding-top: 20px; padding-bottom: 20px;font-family: 'Poppins', sans-serif; font-weight: 500; color:white;">
+         OUR SPONSORS
         </h2>
       </div>
       <div
@@ -147,90 +169,38 @@
         "autoPlay":true,
         "pageDots":false}'
       >
-        <div class="gallery-cell">
-          <div class="card-image">
-            <img
-              src="assets/img/Organisers/Dr Prema KV.png"
-              alt="Profile Image"
-            />
-          </div>
-          <div class="card-content">
-            <h2 class="name">Dr Prema K V</h2>
-            <p class="event-designation">Patron</p>
-            <p class="designation">
-              Associate Director, Professor and Head<br />Department of Computer
-              Science & Engineering <br />
-              MIT, Bengaluru
-            </p>
-          </div>
+        <div class="gallery-cell" >
+          <div class="company-img company1"></div>
         </div>
 
         <div class="gallery-cell">
-          <div class="card-image">
-            <img
-              src="assets/img/Organisers/Dr.Dayananda.jpg"
-              alt="Profile Image"
-            />
-          </div>
-          <div class="card-content">
-            <h2 class="name">Dr. Dayananda P</h2>
-            <p class="event-designation">Patron</p>
-            <p class="designation">
-              Professor and Head<br />Department of Information Technology<br />
-              MIT, Bengaluru
-            </p>
-          </div>
+          <div class="company-img company2"></div>
         </div>
 
         <div class="gallery-cell">
-          <div class="card-image">
-            <img
-              src="assets/img/Organisers/Dr.H.S.Ballal.jpg"
-              alt="Profile Image"
-            />
-          </div>
-          <div class="card-content">
-            <h2 class="name">Dr. H. S. Ballal</h2>
-            <p class="event-designation">Chair</p>
-            <p class="designation">Pro Chancellor<br />MAHE, Manipal</p>
-          </div>
+          <div class="company-img company3"></div>
         </div>
 
         <div class="gallery-cell">
-          <div class="card-image">
-            <img
-              src="assets/img/Organisers/Dr.GururajHL.jpg"
-              alt="Profile Image"
-            />
-          </div>
-          <div class="card-content">
-            <h2 class="name">Dr. Gururaj H L</h2>
-            <p class="event-designation">Convener</p>
-            <p class="designation">
-              Associate Professor<br />Department of Information Technology
-              <br />
-              MIT, Bengaluru
-            </p>
-          </div>
+          <div class="company-img company4"></div>
         </div>
 
         <div class="gallery-cell">
-          <div class="card-image">
-            <img
-              src="assets/img/Organisers/Dr.RashmiR.jpg"
-              alt="Profile Image"
-            />
-          </div>
-          <div class="card-content">
-            <h2 class="name">Dr. Rashmi R</h2>
-            <p class="event-designation">Convener</p>
-            <p class="designation">
-              Assistant Professor<br />Department of Computer Science &
-              Engineering <br />
-              MIT, Bengaluru
-            </p>
-          </div>
+          <div class="company-img company5"></div>
         </div>
+
+        <div class="gallery-cell">
+          <div class="company-img company6"></div>
+        </div>
+
+        <div class="gallery-cell">
+          <div class="company-img company7"></div>
+        </div>
+
+        <div class="gallery-cell">
+          <div class="company-img company8"></div>
+        </div>
+
       </div>
     </div>
     <!-- Organizers Carousel End -->
