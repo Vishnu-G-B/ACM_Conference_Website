@@ -102,6 +102,8 @@ function setFontSize() {
   }
 
 function updateSVGViewBox() {
+
+  try{
     const svg = document.getElementById('visual');
     const svgWidth = svg.getAttribute('width');
     const svgHeight = svg.getAttribute('height');
@@ -109,9 +111,14 @@ function updateSVGViewBox() {
   
     const viewBoxValue = `0 0 ${svgWidth} ${svgHeight*5.5}`;
     svg.setAttribute('viewBox', viewBoxValue);
+  } catch(error) {
+    console.error("NO SVG", error.message);
+  }
 }
 
 function removeElement() {
+
+  try{
     const screenWidth = window.innerWidth;
     const elementToRemove = document.getElementById('removable');
   
@@ -120,13 +127,64 @@ function removeElement() {
         elementToRemove.remove(); 
       }
     }
+  } catch (error){
+    console.error("ERR",error.message);
+  }
+
+}
+
+function changeNavListOnScroll() {
+
+  try{
+    const element = document.getElementById('navbar');
+    const className = "scrolled";
+
+    if (element.classList.contains(className)){
+      element.classList.remove('nav-link-white')
+      element.classList.add('nav-link-blue');
+    } else {
+      element.classList.remove('nav-link-blue');
+      element.classList.add('nav-link-white')
+    }
+  } catch (error){
+    console.error("NO NAV",error.message);
+  }
+}
+
+function checkViewportWidth(){
+  try{
+    const viewportWidth = window.innerWidth;
+    const breakpoint = 576;
+    const element1 = document.getElementById('timeline__event__title1');
+    const element2 = document.getElementById('timeline__event__title2');
+    const element3 = document.getElementById('timeline__event__title3');
+    const element4 = document.getElementById('timeline__event__title4');
+
+    if (viewportWidth < breakpoint) {
+      element1.classList.add('align'); 
+      element2.classList.add('align');
+      element3.classList.add('align');
+      element4.classList.add('align');
+    } else {
+      element1.classList.remove('align');
+      element2.classList.remove('align');
+      element3.classList.remove('align');
+      element4.classList.remove('align');
+    }
+    console.log("ITs coming");
+  } catch (error) {
+    console.error("NO timeline",error.message);
+  }
 }
 
 window.onload = setFontSize;
 removeElement();
 updateSVGViewBox();
+checkViewportWidth();
+changeNavListOnScroll();
 
- 
 window.addEventListener('resize', removeElement);
 window.addEventListener('resize', setFontSize);
 window.addEventListener('resize', updateSVGViewBox);
+window.addEventListener('resize',checkViewportWidth)
+window.addEventListener('scroll', changeNavListOnScroll);
