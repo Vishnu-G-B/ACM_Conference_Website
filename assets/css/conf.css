@@ -927,7 +927,7 @@ h2.speaker-title{
 
     @media screen and (min-width:1200px){
         height: 21vw;
-        font-size: 1vw;
+        font-size: 1.1vw;
     }
 }
   
@@ -957,4 +957,72 @@ h2.speaker-title{
   
 .instruction-card p{
     padding: 0 0 20px 0;
+}
+
+/* Committee Page Styles */
+
+.committee-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin: -10px; */
+}
+
+.committee-person {
+    flex: 0 0 calc(16.3% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 3px dashed white; */
+    color: white;
+    padding: 2px;
+    width: 1vw ;
+    height: auto;
+    margin: 20px 0;
+    transition: max-height 0.5s ease-in-out, color 0.4s ease-in-out;
+
+}
+
+.committee-person .committee-person-title {
+    text-align: center;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.committee-person .committee-person-info {
+    line-height: 1.5;
+    text-align: center;
+    max-height: 0;
+    font-size: 1.2vw;
+    color: transparent;
+    transition: max-height 0.5s ease-in-out, color 0.2s ease-in-out;
+}
+
+.committee-person:hover  .committee-person-info  {
+    max-height: 10vw;
+    color: #fff;
+}
+
+.committee-title {
+    font-size: 4vw; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700; 
+    color:white;
+
+    @media screen and (max-width:576px){
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width:576px){
+    .committee-container{
+        flex-direction: column;
+    }
 }
