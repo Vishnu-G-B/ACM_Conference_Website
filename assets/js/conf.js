@@ -137,19 +137,23 @@ function changeNavListOnScroll() {
   try{
     const nav = document.getElementById('navbar')
     const navElements = document.querySelectorAll('.nav-options');
+    const viewportWidth = window.innerWidth;
     const className = "scrolled";
     const lightLink = "nav-link-white";
     const darkLink = "nav-link-blue"
 
 
     if (nav.classList.contains(className)){
-      navElements.forEach(element => {
-        if(element.classList.contains(lightLink)){
-          element.classList.remove(lightLink);
-          element.classList.add(darkLink);
-        }
-      });
-    } else {
+      if(viewportWidth>992) {
+        navElements.forEach(element => {
+          if(element.classList.contains(lightLink)){
+            element.classList.remove(lightLink);
+            element.classList.add(darkLink);
+          }
+        });
+      }
+      }
+     else {
       navElements.forEach(element => {
         if(element.classList.contains(darkLink)){
           element.classList.remove(darkLink);
@@ -157,7 +161,8 @@ function changeNavListOnScroll() {
         }
       });
     }
-  } catch (error){
+  } 
+  catch (error){
     console.error("NO NAV",error.message);
   }
 }
