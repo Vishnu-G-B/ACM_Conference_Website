@@ -66,22 +66,21 @@ $(window).scroll(function() {
 
 console.log('im alive')
 
-// function updateDivClasses() {
-//     var div = document.getElementById('dynamicDiv');
-//     var width = window.innerWidth;
-  
-//     if (width <= 767) {
-//       div.classList.remove('default-style');
-//       div.classList.add('small-screen-style');
-//     } else {
-//       div.classList.remove('small-screen-style');
-//       div.classList.add('default-style');
-//     }
-//   }
-  
-//   // Call the function on page load and when the window is resized
-//   window.onload = updateDivClasses;
-//   window.addEventListener('resize', updateDivClasses);
+function toggleClassOnClick() {
+  try {
+    const element = document.getElementById("toggle");
+    const screenWidth = window.innerWidth;
+    if (screenWidth>992){
+      element.classList.remove('align-offcanvas');
+      element.classList.add('align');
+    } else {
+      element.classList.add('align-offcanvas');
+      element.classList.remove('align');
+    }
+  } catch (error) {
+    console.error("FKIT", error.message);
+  }
+}
 
 function setFontSize() {
     const screenWidth = window.innerWidth;
@@ -136,15 +135,27 @@ function removeElement() {
 function changeNavListOnScroll() {
 
   try{
-    const element = document.getElementById('navbar');
+    const nav = document.getElementById('navbar')
+    const navElements = document.querySelectorAll('.nav-options');
     const className = "scrolled";
+    const lightLink = "nav-link-white";
+    const darkLink = "nav-link-blue"
 
-    if (element.classList.contains(className)){
-      element.classList.remove('nav-link-white')
-      element.classList.add('nav-link-blue');
+
+    if (nav.classList.contains(className)){
+      navElements.forEach(element => {
+        if(element.classList.contains(lightLink)){
+          element.classList.remove(lightLink);
+          element.classList.add(darkLink);
+        }
+      });
     } else {
-      element.classList.remove('nav-link-blue');
-      element.classList.add('nav-link-white')
+      navElements.forEach(element => {
+        if(element.classList.contains(darkLink)){
+          element.classList.remove(darkLink);
+          element.classList.add(lightLink);
+        }
+      });
     }
   } catch (error){
     console.error("NO NAV",error.message);
@@ -177,12 +188,15 @@ function checkViewportWidth(){
   }
 }
 
+window.onload = toggleClassOnClick;
 window.onload = setFontSize;
+toggleClassOnClick();
 removeElement();
 updateSVGViewBox();
 checkViewportWidth();
 changeNavListOnScroll();
 
+window.addEventListener('resize',toggleClassOnClick)
 window.addEventListener('resize', removeElement);
 window.addEventListener('resize', setFontSize);
 window.addEventListener('resize', updateSVGViewBox);

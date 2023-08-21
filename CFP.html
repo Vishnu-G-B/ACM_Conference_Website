@@ -15,12 +15,7 @@
     <script src="https://kit.fontawesome.com/631b98025b.js" crossorigin="anonymous"></script> <!-- Font Awesome Icon Kit -->
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/conf.css" />
 
     <!-- Flickity -->
@@ -38,74 +33,97 @@
     <title>ICCVAI24</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
-      <div class="container-fluid justify-content-between">
-        <a href="index.html" class="navbar-brand" id="logo">
-          <img src="./assets/img/conflogo.png" alt="logo" width="200" />
+    <nav class="navbar navbar-expand-lg bg-light fixed-top" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-4" href="#">
+          <img src="./assets/img/conflogo.png" alt="logo" />
         </a>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <div class="align">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link-white">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="index.html#about" class="nav-link-white">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="index.html#organisers" class="nav-link-white">Organisers</a>
-              </li>
-              <li class="nav-item">
-                <a href="index.html#schedule" class="nav-link-white">Schedule</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link-white dropdown-toggle" href="#timeline" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                  CFP
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#timeline">Call for Papers</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#timeline">Important Dates</a></li>
-                  <li><a class="dropdown-item" href="#">Theme of ICCVAI24</a></li>
-                  <li><a class="dropdown-item" href="#">Instruction to Authors</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Committees
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item " href="#">TPC - Technical Progress Committee</a></li>
-                  <li><a class="dropdown-item " href="#">Advisory Committee</a></li>
-                  <!-- <li><hr class="dropdown-divider"></li> -->
-                  <li><a class="dropdown-item " href="#">Organizing Committee</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link-white dropdown-toggle" href="speaker.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Speaker
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="speaker.html">Keynote Speaker </a></li>
-                  <li><a class="dropdown-item" href="#">Invited Speaker</a></li>
-                </ul>
-              </li>
-              
-              <li class="nav-item">
-                <a href="#submit" class="nav-link-white">
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                  >
-                    Submit Paper
-                  </button>
-                </a>
-              </li>
-            </div>
-          </ul>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="sidebar offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white border-bottom">
+            <img src="./assets/img/conflogo.png" alt="logo" width="250" />
+            <button
+              type="button"
+              class="btn-close btn-clos-white shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <div class="align-offcanvas" id="toggle">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link-white nav-options">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link-white nav-options">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#organisers" class="nav-link-white nav-options">Organisers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#schedule" class="nav-link-white nav-options">Schedule</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link-white dropdown-toggle nav-options" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    CFP
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="CFP.html">Call for Papers</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="CFP.html#timeline">Important Dates</a></li>
+                    <li><a class="dropdown-item" href="#">Theme of ICCVAI24</a></li>
+                    <li><a class="dropdown-item" href="#">Instruction to Authors</a></li>
+                  </ul>
+                </li>
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link-white dropdown-toggle nav-options" href="committees.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Committees
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item " href="committees.html">TPC - Technical Progress Committee</a></li>
+                    <li><a class="dropdown-item " href="committees.html">Advisory Committee</a></li>
+                    <li><a class="dropdown-item " href="committees.html">Organizing Committee</a></li>
+                  </ul>
+                </li>
+  
+                <li class="nav-item dropdown">
+                  <a class="nav-link-white dropdown-toggle nav-options" href="speaker.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Speaker
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="speaker.html">Keynote Speaker </a></li>
+                    <li><a class="dropdown-item" href="#">Invited Speaker</a></li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item">
+                  <a href="#submit" class="nav-link-blue">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      Submit Paper
+                    </button>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

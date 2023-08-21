@@ -60,6 +60,7 @@ section {
 
 .align {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -103,6 +104,25 @@ section {
 .navbar-brand img {
     width: 270px;
     height: auto;
+
+    @media screen and (max-width:576px) {
+        width: 200px;
+    }
+}
+.offcanvas-body .navbar-nav .align-offcanvas{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media screen and(min-width:1200px){
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.offcanvas-body .navbar-nav .align-offcanvas li{
+    margin: 20px;
 }
 
 .hero-text {
@@ -1022,7 +1042,28 @@ h2.speaker-title{
 }
 
 @media screen and (max-width:576px){
-    .committee-container{
-        flex-direction: column;
+
+    .committee-container .committee-person{
+        flex: 1 0 100%;
+    }
+
+    .committee-person .committee-person-title {
+        font-size: 5vw;
+    }
+
+    .committee-person .committee-person-info {
+        font-size: 4vw;
+    }
+
+    .committee-person:hover  .committee-person-info  {
+        max-height: auto;
+        color: #fff;
+    }
+}
+
+@media(max-width:992px) {
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
     }
 }
