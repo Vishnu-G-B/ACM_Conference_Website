@@ -1000,7 +1000,7 @@ h2.speaker-title{
 }
   
 .instruction-card:hover::before{
-    transition-delay:0.2s ;
+    transition-delay:0.1s ;
     transform: scale(40);
 }
   
@@ -1041,7 +1041,7 @@ h2.speaker-title{
 
 }
 
-.committee-person .committee-person-title {
+.committee-person-title {
     text-align: center;
     font-size: 1.4vw;
     font-weight: 600;
@@ -1074,6 +1074,37 @@ h2.speaker-title{
     }
 }
 
+.instruction-card .content-section {
+    padding: 0;
+}
+
+.committee-img-container img{
+    width:190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.chief-patron {
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+.column-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conf-designation {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+.mahe-designation {
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+
 @media screen and (max-width:576px){
 
     .committee-container .committee-person{
@@ -1099,6 +1130,22 @@ h2.speaker-title{
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(10px);
     }
+}
+
+
+/* DIVIDER STYLES */
+
+div.wavy-divider {
+    margin-bottom: -120px;
+    background-color: #0434b4;
+}
+
+div.wavy-divider .editorial{
+    width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    margin: 0;
+    z-index: 5;
 }
 
 
