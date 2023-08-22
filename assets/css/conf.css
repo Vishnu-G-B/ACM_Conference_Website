@@ -561,8 +561,13 @@ h2.title{
     }   
 }
 
-section.bg-drkblue {
+section.bg-indexFooter {
     background-color: #002280;
+    min-height: 300px;
+}
+
+section.bg-drkblue {
+    background-color: #0434b4;
     min-height: 300px;
 }
 
@@ -1095,3 +1100,62 @@ h2.speaker-title{
         backdrop-filter: blur(10px);
     }
 }
+
+
+  .parallax1 > use {
+    animation: move-forever1 10s linear infinite;
+    &:nth-child(1) {
+      animation-delay: -2s;
+    }
+  }
+  .parallax2 > use {
+    animation: move-forever2 8s linear infinite;
+    &:nth-child(1) {
+      animation-delay: -2s;
+    }
+  }
+  .parallax3 > use {
+    animation: move-forever3 6s linear infinite;
+    &:nth-child(1) {
+      animation-delay: -2s;
+    }
+  }
+  .parallax4 > use {
+    animation: move-forever4 4s linear infinite;
+    &:nth-child(1) {
+      animation-delay: -2s;
+    }
+  }
+  @keyframes move-forever1 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  @keyframes move-forever2 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  @keyframes move-forever3 {
+    0% {
+      transform: translate(85px, 0%);
+    }
+    100% {
+      transform: translate(-90px, 0%);
+    }
+  }
+  @keyframes move-forever4 {
+    0% {
+      transform: translate(-90px, 0%);
+    }
+    100% {
+      transform: translate(85px, 0%);
+    }
+  }
+  
