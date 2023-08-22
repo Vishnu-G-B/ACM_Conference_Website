@@ -46,6 +46,14 @@ section {
     z-index: 11;
 }
 
+.spacer-mobile {
+    aspect-ratio: 960/250;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .layer1 {
     background-image: url(../img/layered-waves-haikei-dark.svg);
 }
@@ -54,8 +62,20 @@ section {
     background-image: url(../img/wave-haikei.svg);
 }
 
+.layer3 {
+    background-image: url(../img/layered-waves-haikei-mobile.svg);
+}
+
 .flip {
     transform: rotate(180deg);
+}
+
+.mt-var {
+    margin-top: 2.3vw;
+
+    @media screen and (max-width:576px){
+        margin-top: 4vw;
+    }
 }
 
 .align {
@@ -89,6 +109,10 @@ section {
 .navbar-nav .nav-item a.nav-link-blue {
     color: #0031B0;
     text-decoration: none;
+
+    @media screen and (max-width:576px){
+        color: white;
+    }
 }
 .navbar-nav .nav-item a.nav-link-blue:hover {
     color: #0031B0;
@@ -233,6 +257,10 @@ section {
     align-items: center;
     justify-content: space-between;
     margin: 0 5px;
+
+    @media screen and (max-width:576px) {
+        width: 66%;
+    }
 }
 
 .gallery-cell .company-img {

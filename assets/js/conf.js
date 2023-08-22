@@ -64,7 +64,7 @@ $(window).scroll(function() {
 //     ride: "carousel"
 // }),
 
-console.log('im alive')
+console.log('im alive');
 
 function toggleClassOnClick() {
   try {
@@ -152,8 +152,7 @@ function changeNavListOnScroll() {
           }
         });
       }
-      }
-     else {
+    }else {
       navElements.forEach(element => {
         if(element.classList.contains(darkLink)){
           element.classList.remove(darkLink);
@@ -193,17 +192,66 @@ function checkViewportWidth(){
   }
 }
 
+function changeSVGOnMobile() {
+  try {
+    const elements = document.querySelectorAll('.var-svg');
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth < 576) {
+      elements.forEach(element => {
+        element.classList.remove('spacer', 'layer1');
+        element.classList.add('spacer-mobile', 'layer3');
+      });
+    } else {
+      elements.forEach(element => {
+        element.classList.add('spacer', 'layer1');
+        element.classList.remove('spacer-mobile', 'layer3');
+      });
+    }
+  } catch (error) {
+    console.error("NO WAVE SVG",error.message);
+  }
+}
+
+// window.onload = changeSVGOnMobile
 window.onload = toggleClassOnClick;
 window.onload = setFontSize;
+changeSVGOnMobile();
 toggleClassOnClick();
 removeElement();
 updateSVGViewBox();
 checkViewportWidth();
 changeNavListOnScroll();
 
+window.addEventListener('resize',changeSVGOnMobile);
 window.addEventListener('resize',toggleClassOnClick)
 window.addEventListener('resize', removeElement);
 window.addEventListener('resize', setFontSize);
 window.addEventListener('resize', updateSVGViewBox);
 window.addEventListener('resize',checkViewportWidth)
 window.addEventListener('scroll', changeNavListOnScroll);
+
+
+document.querySelectorAll(".nav-link").forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    var linkHref = link.getAttribute("href");
+    triggerButtonAction(linkHref);
+  });
+});
+
+document.querySelector(".btn-close").addEventListener("click", function() {
+  console.log("Close button clicked!");
+});
+
+document.getElementById("myButton").addEventListener("click", function() {
+  console.log("Button clicked!");
+});
+
+function triggerButtonAction(linkHref) {
+  document.getElementById("myButton").click();
+
+  setTimeout(function() {
+    window.location.href = linkHref;
+  }, 100); 
+}
