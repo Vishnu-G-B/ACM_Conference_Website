@@ -963,8 +963,8 @@ h2.speaker-title{
 .instruction-card {
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
-    width: 27vw;
-    height: auto;
+    width: 27vw ;
+    height: 21vw;
     background-color: #fff;
     padding: 5px 20px 0 5px;
     margin: 10px;
@@ -976,6 +976,7 @@ h2.speaker-title{
 
     @media screen and (max-width:576px) {
         width: 85vw;
+        height: fit-content;
     }
 
     @media screen and (min-width:1200px){
@@ -1079,14 +1080,24 @@ h2.speaker-title{
 }
 
 .committee-img-container img{
-    width:190px;
-    height: 190px;
+    width:12vw;
+    height: 12vw;
     border-radius: 50%;
+    object-fit: cover;
+
+    @media screen and (max-width:576px) {
+        width: 35vw;
+        height: 35vw;
+    }
 }
 
 .chief-patron {
     font-size: 2vw;
     font-weight: 800;
+
+    @media screen and (max-width:576px){
+        font-size: 5.5vw;
+    }
 }
 
 .column-align {
@@ -1096,13 +1107,33 @@ h2.speaker-title{
     justify-content: center;
 }
 
-.conf-designation {
+.conf-designation {    /* REUSE THIS !!!!!!*/
     font-size: 1.2vw;
     font-weight: 500;
+
+    @media screen and (max-width:576px) {
+        font-size: 4vw;
+    }
 }
+
+.title.secondary {
+    font-size: 3vw;
+}
+
 .mahe-designation {
     font-size: 1.3vw;
     font-weight: 600;
+
+    @media screen and (max-width:576px) {
+        font-size: 4.3vw;
+    }
+}
+
+.full-span {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width:576px){
@@ -1125,6 +1156,7 @@ h2.speaker-title{
     }
 }
 
+
 @media(max-width:992px) {
     .sidebar {
         background-color: rgba(255, 255, 255, 0.15);
@@ -1135,8 +1167,9 @@ h2.speaker-title{
 
 /* DIVIDER STYLES */
 
+
 div.wavy-divider {
-    margin-bottom: -120px;
+    margin-bottom: -200px;
     background-color: #0434b4;
 }
 
