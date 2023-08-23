@@ -213,6 +213,24 @@ function changeSVGOnMobile() {
   }
 }
 
+function changeIcon() {//REWRITE THIS FUNCTION ITS KINDA A**
+  try {
+    const icon1 = document.getElementById('CSEplus');
+    const ariaValue = document.getElementById('button1').getAttribute('aria-expanded');
+
+    if (ariaValue === "true") {
+      icon1.classList.remove('fa-plus');
+      icon1.classList.add('fa-minus');
+    }else {
+      icon1.classList.add('fa-plus');
+      icon1.classList.remove('fa-minus');
+    }
+  } catch (error) {
+    console.error("not on committees page",error.message);
+  }
+
+}
+
 // window.onload = changeSVGOnMobile
 window.onload = toggleClassOnClick;
 window.onload = setFontSize;
@@ -222,7 +240,10 @@ removeElement();
 updateSVGViewBox();
 checkViewportWidth();
 changeNavListOnScroll();
+changeIcon();
 
+element = document.getElementById('button1');
+element.addEventListener("click",changeIcon);
 window.addEventListener('resize',changeSVGOnMobile);
 window.addEventListener('resize',toggleClassOnClick)
 window.addEventListener('resize', removeElement);
@@ -231,6 +252,10 @@ window.addEventListener('resize', updateSVGViewBox);
 window.addEventListener('resize',checkViewportWidth)
 window.addEventListener('scroll', changeNavListOnScroll);
 
+// var el = document.getElementById('button1');
+// if (el.addEventListener){
+//   el.addEventListener("click",changeIcon,false);
+// }
 
 document.querySelectorAll(".nav-link").forEach(function(link) {
   link.addEventListener("click", function(event) {
