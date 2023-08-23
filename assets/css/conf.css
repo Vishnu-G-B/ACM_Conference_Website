@@ -1258,6 +1258,15 @@ h2.speaker-title{
     .committee-person-info.column-align.prof {
         padding-bottom: 10px;
     }
+
+    .committee h2.title {
+        font-size: 8vw;
+    }
+
+    .title.secondary {
+        font-size: 6vw;
+    }
+
 }
 
 
