@@ -1136,6 +1136,61 @@ h2.speaker-title{
     align-items: center;
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prof-card {
+    flex: 0 0 26%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    height: 15vw;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px dashed #0434b4;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    @media screen and (max-width:576px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.prof-card .prof-img img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.prof-name {
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.prof-designation {
+    font-weight: 300;
+    font-size: 1vw;
+}
+
+.prof-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.1vw;
+    font-weight: 400;
+}
+
+
 @media screen and (max-width:576px){
 
     .committee-container .committee-person{
