@@ -1389,3 +1389,51 @@ div.wavy-divider-white .editorial{
     position: relative;
     background-color: rgba(0, 0, 0, 0);
 }
+
+/* Google Map Styles */
+
+.location-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.map-section {
+    min-height: 300px;
+    margin-top: 50px;
+    margin-bottom: -70px;
+}
+
+.map-container {
+    flex: 0 1 calc(50%-10px);
+    min-width: 50vw;
+    height: auto;
+    padding: 10px;
+}
+
+.location-info {
+    flex: 0 1 calc(50%-10px);
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.para.location {
+    border: none;
+    margin-left: -20px;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+    aspect-ratio: 16/9;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 20px;
+}
