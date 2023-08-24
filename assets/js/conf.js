@@ -231,10 +231,6 @@ window.addEventListener('resize', updateSVGViewBox);
 window.addEventListener('resize',checkViewportWidth)
 window.addEventListener('scroll', changeNavListOnScroll);
 
-// var el = document.getElementById('button1');
-// if (el.addEventListener){
-//   el.addEventListener("click",changeIcon,false);
-// }
 
 document.querySelectorAll(".nav-link").forEach(function(link) {
   link.addEventListener("click", function(event) {
@@ -263,22 +259,30 @@ function triggerButtonAction(linkHref) {
 
 function changeIcon() {//REWRITE THIS FUNCTION ITS KINDA A**
   try {
-    const icon1 = document.getElementById('CSEplus');
-    const ariaValue = document.getElementById('button1').getAttribute('aria-expanded');
+    const buttons = document.querySelectorAll('.button-background-move');
+    console.log(buttons)
+    let expanded;
+    
+    buttons.forEach(element => {
+      expanded = element.getAttribute('aria-expanded');
+      let icon = document.getElementById(element.getAttribute('data-info'));
+      console.log(element.getAttribute('data-info'));
+      if (expanded === "true"){
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      } else {
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      }
+    });
 
-    if (ariaValue === "true") {
-      icon1.classList.remove('fa-plus');
-      icon1.classList.add('fa-minus');
-    }else {
-      icon1.classList.add('fa-plus');
-      icon1.classList.remove('fa-minus');
-    }
   } catch (error) {
     console.error("not on committees page",error.message);
   }
 
 }
 
-
-element = document.getElementById('button1');
-element.addEventListener("click",changeIcon);
+const buttonElements = document.querySelectorAll('.button-background-move');
+buttonElements.forEach(element => {
+  element.addEventListener("click",changeIcon);
+});

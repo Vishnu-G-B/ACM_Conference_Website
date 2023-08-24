@@ -448,6 +448,7 @@ p.text {
     color: #0031B0;
     font-weight: 800;
     font-size: 5.5vw;
+    line-height: 1.2;
 }
 
 h2.title{
@@ -570,6 +571,7 @@ section.bg-drkblue {
     background-color: #0434b4;
     min-height: 300px;
 }
+
 
 /* NAVBAR STYLES */
 
@@ -907,7 +909,8 @@ section.timeline-section {
 
 .speaker-image {
     width: 40vw;
-    height: auto;
+    height: 40vw;
+    object-fit: cover;
     border-radius: 50%;
 }
 
@@ -1048,6 +1051,10 @@ h2.speaker-title{
     font-weight: 600;
 }
 
+.blue {
+    color: #0434b4;
+}
+
 .committee-person .committee-person-info {
     line-height: 1.5;
     text-align: center;
@@ -1060,6 +1067,11 @@ h2.speaker-title{
 .committee-person:hover  .committee-person-info  {
     max-height: 10vw;
     color: #fff;
+}
+
+.committee-person:hover  .committee-person-info.blue  {
+    max-height: 10vw;
+    color: #0434b4;
 }
 
 .committee-title {
@@ -1286,7 +1298,20 @@ div.wavy-divider {
     background-color: #0434b4;
 }
 
+div.wavy-divider-white {
+    margin-bottom: -100px;
+    background-color: white;
+}
+
 div.wavy-divider .editorial{
+    width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    margin: 0;
+    z-index: 5;
+}
+
+div.wavy-divider-white .editorial{
     width: 100%;
     min-height: 50px;
     max-height: 100px;
