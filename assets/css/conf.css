@@ -1157,14 +1157,14 @@ h2.speaker-title{
 
 .visible-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .hidden-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -1177,7 +1177,7 @@ h2.speaker-title{
     align-items: center;
     min-width: 24vw;
     height: 15vw;
-    margin: 20px 6px;
+    margin: 20px 0;
     border-radius: 10px;
     border: 2px dashed #0434b4;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
