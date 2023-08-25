@@ -294,13 +294,10 @@ const observer = new IntersectionObserver((entries) => {
     console.log(entry);
     if(entry.isIntersecting){
       entry.target.classList.add('.animate__animated');
-    } else {
-      entry.target.classList.remove('.animate__animated');
     }
   })
 });
 
 
-const animatedElements = document.querySelectorAll(".animate__animated");
-animatedElements.forEach((el) => el.classList.remove('.animate__animated'))
+const animatedElements = document.querySelectorAll(".animate");
 animatedElements.forEach((el) => observer.observe(el));
