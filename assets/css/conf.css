@@ -1102,6 +1102,17 @@ h2.speaker-title{
         height: 35vw;
     }
 }
+.committee-img-container.chair img{
+    width:10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @media screen and (max-width:576px) {
+        width: 35vw;
+        height: 35vw;
+    }
+}
 
 .chief-patron {
     font-size: 2vw;
@@ -1133,12 +1144,16 @@ h2.speaker-title{
 }
 
 .mahe-designation {
-    font-size: 1.3vw;
+    font-size: 1.15vw;
     font-weight: 600;
 
     @media screen and (max-width:576px) {
         font-size: 4.3vw;
     }
+}
+
+.mahe-designation.chair {
+    text-align: center;
 }
 
 .full-span {
