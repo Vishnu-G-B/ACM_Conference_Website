@@ -286,3 +286,21 @@ const buttonElements = document.querySelectorAll('.button-background-move');
 buttonElements.forEach(element => {
   element.addEventListener("click",changeIcon);
 });
+
+// INTERSECTION OBSERVER CODE
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) =>{
+    console.log(entry);
+    if(entry.isIntersecting){
+      entry.target.classList.add('.animate__animated');
+    } else {
+      entry.target.classList.remove('.animate__animated');
+    }
+  })
+});
+
+
+const animatedElements = document.querySelectorAll(".animate__animated");
+animatedElements.forEach((el) => el.classList.remove('.animate__animated'))
+animatedElements.forEach((el) => observer.observe(el));
