@@ -166,6 +166,22 @@ function changeNavListOnScroll() {
   }
 }
 
+function changeLogoOnScroll() {
+  const nav = document.getElementById('navbar');
+  const imgLogo = document.getElementById('changingImg');
+  try {
+    if (document.title === "CODE-AI:CFP"){
+      if(nav.classList.contains('scrolled')){
+        imgLogo.src = "assets/img/dark-logo-new.png";
+      } else {
+        imgLogo.src = "assets/img/light-logo-new.png";
+      }
+    }
+  } catch (error) {
+    console.error("Not on CFP page", error.message);
+  }
+}
+
 function checkViewportWidth(){
   try{
     const viewportWidth = window.innerWidth;
@@ -222,6 +238,7 @@ removeElement();
 updateSVGViewBox();
 checkViewportWidth();
 changeNavListOnScroll();
+changeLogoOnScroll();
 
 window.addEventListener('resize',changeSVGOnMobile);
 window.addEventListener('resize',toggleClassOnClick)
@@ -230,6 +247,7 @@ window.addEventListener('resize', setFontSize);
 window.addEventListener('resize', updateSVGViewBox);
 window.addEventListener('resize',checkViewportWidth)
 window.addEventListener('scroll', changeNavListOnScroll);
+window.addEventListener('scroll', changeLogoOnScroll);
 
 
 document.querySelectorAll(".nav-link").forEach(function(link) {
@@ -301,3 +319,4 @@ const observer = new IntersectionObserver((entries) => {
 
 const animatedElements = document.querySelectorAll(".animate");
 animatedElements.forEach((el) => observer.observe(el));
+

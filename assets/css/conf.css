@@ -125,14 +125,30 @@ section {
     color: white;
 }
 
+.navbar-brand {
+    padding-bottom: 0;
+}
+
 .navbar-brand img {
-    width: 270px;
-    height: auto;
+    width: 350px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: -25px;
 
     @media screen and (max-width:576px) {
-        width: 200px;
+        width: 270px;
+        height: auto;
+        object-fit: fill;
+        margin-top: -15px;
+        margin-left: -20px;
+        
     }
 }
+
+.navbar-brand img.light-logo {
+    margin-top: -15px;
+}
+
 .offcanvas-body .navbar-nav .align-offcanvas{
     display: flex;
     flex-direction: column;
