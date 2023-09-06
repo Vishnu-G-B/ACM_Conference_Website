@@ -463,7 +463,7 @@ p.text {
 .header-larger {
     color: #0031B0;
     font-weight: 800;
-    font-size: 5.5vw;
+    font-size: 4vw;
     line-height: 1.2;
 }
 
@@ -933,7 +933,7 @@ section.timeline-section {
 p.keynote-text {
     flex: 1;
     flex-wrap: wrap;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     padding: 10px;
     /* margin-left: 40px; */
 
@@ -944,7 +944,7 @@ p.keynote-text {
 }
 
 h2.speaker-title{
-    font-size: 6vw; 
+    font-size: 5vw; 
     padding-top: 20px; 
     padding-bottom: 20px;
     font-family: 'Poppins', sans-serif; 
