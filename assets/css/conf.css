@@ -19,7 +19,12 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.carousel-inner .carousel-item img {
+    height: 100vh;
+    object-fit:cover;
 }
 
 .color-overlay {
@@ -191,7 +196,7 @@ section {
 
 .title-full {
     font-weight: 400;
-    font-size: 2vw;
+    font-size: 1.5vw;
     flex-wrap: wrap;
     display: inline-block;
     line-height: 1;
@@ -199,7 +204,7 @@ section {
 
 .text-loc {
     font-weight: 500;
-    font-size: 2.5vw;
+    font-size: 2vw;
     flex-wrap: wrap;
     display: inline-block;
     line-height: 1;
@@ -208,6 +213,7 @@ section {
 @media screen and (max-width: 767px) {
     .landing-title {
         font-size: 14vw;
+        margin-left: 5px;
     }
 
     .title-full {
@@ -452,6 +458,7 @@ p.text {
     font-size: 10vw;
     padding: 10px;
     margin-left: 40px;
+    text-align: justify;
 }
 
 .header{
@@ -465,6 +472,9 @@ p.text {
     font-weight: 800;
     font-size: 4vw;
     line-height: 1.2;
+    @media screen and (max-width:576px) {
+        font-size: 10vw;
+    }
 }
 
 h2.title{
@@ -925,9 +935,9 @@ section.timeline-section {
 
 .speaker-image {
     width: 40vw;
-    height: 40vw;
+    height: 37vw;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 30px;
 }
 
 p.keynote-text {
@@ -983,7 +993,7 @@ h2.speaker-title{
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
     width: 27vw ;
-    height: 21vw;
+    height: 17.3vw;
     background-color: #fff;
     padding: 5px 20px 0 5px;
     margin: 10px;
@@ -999,8 +1009,8 @@ h2.speaker-title{
     }
 
     @media screen and (min-width:1200px){
-        height: 21vw;
-        font-size: 1.1vw;
+        height: 17.3vw;
+        font-size: 1.03vw;
     }
 }
   
@@ -1108,14 +1118,14 @@ h2.speaker-title{
 }
 
 .committee-img-container img{
-    width:12vw;
-    height: 12vw;
+    width:10.5vw;
+    height: 10.5vw;
     border-radius: 50%;
     object-fit: cover;
 
     @media screen and (max-width:576px) {
-        width: 35vw;
-        height: 35vw;
+        width: 32.5vw;
+        height: 32.5vw;
     }
 }
 .committee-img-container.chair img{
@@ -1131,7 +1141,7 @@ h2.speaker-title{
 }
 
 .chief-patron {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 800;
 
     @media screen and (max-width:576px){
@@ -1160,7 +1170,7 @@ h2.speaker-title{
 }
 
 .mahe-designation {
-    font-size: 1.15vw;
+    font-size: 1vw;
     font-weight: 600;
 
     @media screen and (max-width:576px) {
