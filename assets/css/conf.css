@@ -19,7 +19,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    max-height: 100vh;
+    /* max-height: 100vh; */
 }
 
 .carousel-inner .carousel-item img {
@@ -1251,6 +1251,7 @@ h2.speaker-title{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    min-height: fit-content;
 }
 
 .prof-card {
