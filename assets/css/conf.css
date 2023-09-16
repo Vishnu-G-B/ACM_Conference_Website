@@ -14,6 +14,13 @@ section {
     min-height: 700px;
 }
 
+section.footer-section.bg-drkblue {
+    @media screen and (max-width:567px) {
+        min-height: fit-content;
+    }
+}
+
+
 .home {
     background-position: center;
     background-repeat: no-repeat;
@@ -231,10 +238,11 @@ section {
 }
 
 .section-hostedby {
+    min-height: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100vw;
+    justify-self:center;
 
     @media screen and (max-width:576px) {
         flex-direction: column;
@@ -243,12 +251,13 @@ section {
 }
 
 .box {
-    text-align: center;
     margin: 5px;
     padding: 0 0 10px 0;
+    max-width: fit-content;
 }
 
 .box .title {
+    text-align: center;
     margin-top: 0;
     font-size: 1.5vw;
     margin-bottom: 5px;
@@ -259,22 +268,37 @@ section {
 
 }
 
-.box img {
-    /* border-radius: 50px; */
+.mahe-logo img{
     object-fit: contain;
     width: 30vw;
     height: 200px;
 }
 
-.box .image-logo {
-    /* border-radius: 50px; */
-    overflow: hidden;
+.acm-logo img {
+    object-fit: contain;
+    width: 30vw;
+    height: 200px;
 }
 
-@media screen and (max-width:576px) {
-    .box .image {
-        margin: 0 auto;
-        width: 60vw;
+.tNf-logo img {
+    object-fit: contain;
+    width: 20vw;
+    height: 200px;
+}
+
+@media screen and (max-width:567px) {
+    .mahe-logo img{
+        width: 90vw;
+        height: auto;
+    }
+    
+    .acm-logo img {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .tNf-logo img {
+        width: 90vw;
         height: auto;
     }
 }
@@ -611,9 +635,9 @@ h2.title{
 
 .last-section .schedule-img  img{
     margin-left: 10vw;
-    width: 50vw;
+    width: 45vw;
     height: auto;
-    margin-right: -5vw;
+    margin-right: 2vw;
 }
 
 @media screen and (max-width: 767px) {
@@ -1034,6 +1058,7 @@ h2.speaker-title{
 
     @media screen and (max-width:576px){
         flex: 1 1 calc(100%);
+        flex-direction: column;
     }
 
 }
@@ -1236,6 +1261,9 @@ h2.speaker-title{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width:567px) {
+        flex-direction: column;
+    }
 }
 
 .card-container {
