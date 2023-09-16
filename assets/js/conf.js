@@ -308,15 +308,12 @@ buttonElements.forEach(element => {
 // INTERSECTION OBSERVER CODE
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) =>{
-    console.log(entry);
-    if(entry.isIntersecting){
-      entry.target.classList.add('.animate__animated');
-    }
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } 
   })
-});
+})
 
-
-const animatedElements = document.querySelectorAll(".animate");
-animatedElements.forEach((el) => observer.observe(el));
-
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => {observer.observe(el)});
