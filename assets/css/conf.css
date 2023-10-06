@@ -269,21 +269,34 @@ section.footer-section.bg-drkblue {
 }
 
 .mahe-logo img{
-    object-fit: contain;
-    width: 30vw;
+    object-fit: cover;
+    width: 25vw;
     height: 200px;
 }
 
 .acm-logo img {
-    object-fit: contain;
-    width: 30vw;
+    object-fit: cover;
+    width: 25vw;
     height: 200px;
 }
 
 .tNf-logo img {
-    object-fit: contain;
-    width: 20vw;
+    object-fit: cover;
+    width: 25vw;
     height: 200px;
+}
+
+.collaboration-footer {
+    font-size: 2.5vw;
+    @media screen and (max-width:567px) {
+        font-size: 7vw;
+    }
+}
+
+.collaboration-title.title {
+    @media screen and (max-width:576px) {
+        font-size: 5vw;
+    };
 }
 
 @media screen and (max-width:567px) {
