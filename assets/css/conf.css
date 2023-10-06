@@ -1200,7 +1200,7 @@ h2.speaker-title{
     border-radius: 10px;
     filter: drop-shadow(0 5px 10px 0 #ffffff);
     width: 27vw ;
-    height: 17.3vw;
+    height: 18vw;
     background-color: #fff;
     padding: 5px 20px 0 5px;
     margin: 10px;
@@ -1216,7 +1216,7 @@ h2.speaker-title{
     }
 
     @media screen and (min-width:1200px){
-        height: 17.3vw;
+        height: 18vw;
         font-size: 1.03vw;
     }
 }
@@ -1246,6 +1246,58 @@ h2.speaker-title{
 }
   
 .instruction-card p{
+    padding: 0 0 20px 0;
+}
+
+.instruction-card-scientific {
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 10px 0 #ffffff);
+    width: 27vw ;
+    height: 18vw;
+    background-color: #fff;
+    padding: 5px 20px 0 5px;
+    margin: 10px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in;
+    border: 5px dashed white;
+
+    @media screen and (max-width:576px) {
+        width: 85vw;
+        height: fit-content;
+    }
+
+    @media screen and (min-width:1200px){
+        height: 21vw;
+        font-size: 1.03vw;
+    }
+}
+.instruction-card-scientific::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    right: -15px;
+    background: #0434b4;
+    height:900px;
+    width: 25px;
+    border-radius: 32px;
+    transform: scale(1.5);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+}
+  
+.instruction-card-scientific:hover::before{
+    transition-delay:0.1s ;
+    transform: scale(40);
+}
+  
+.instruction-card-scientific:hover{
+    color: #fff;
+}
+  
+.instruction-card-scientific p{
     padding: 0 0 20px 0;
 }
 
@@ -1379,6 +1431,7 @@ h2.speaker-title{
 .mahe-designation {
     font-size: 1vw;
     font-weight: 600;
+    text-align: center;
 
     @media screen and (max-width:576px) {
         font-size: 4.3vw;
