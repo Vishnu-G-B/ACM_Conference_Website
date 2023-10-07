@@ -270,19 +270,19 @@ section.footer-section.bg-drkblue {
 
 .mahe-logo img{
     object-fit: cover;
-    width: 25vw;
+    width: 27vw;
     height: 200px;
 }
 
 .acm-logo img {
     object-fit: cover;
-    width: 25vw;
+    width: 27vw;
     height: 200px;
 }
 
 .tNf-logo img {
     object-fit: cover;
-    width: 25vw;
+    width: 27vw;
     height: 200px;
 }
 
@@ -315,6 +315,41 @@ section.footer-section.bg-drkblue {
         height: auto;
     }
 }
+
+@media screen and (max-width:1300px) {
+    .mahe-logo img{
+        width: 30vw;
+        height: 200px;
+    }
+    
+    .acm-logo img {
+        width: 30vw;
+        height: 200px;
+    }
+    
+    .tNf-logo img {
+        width: 30vw;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .mahe-logo img{
+        width: 35vw;
+        height: 200px;
+    }
+    
+    .acm-logo img {
+        width: 35vw;
+        height: 200px;
+    }
+    
+    .tNf-logo img {
+        width: 35vw;
+        height: 200px;
+    }
+}
+
 
 .about h1 {
     font-size: 5rem;
@@ -696,7 +731,10 @@ section.bg-drkblue {
 
 .navbar-brand {
     margin-right: 0;
-    margin-left: 4vw;
+    margin-left: 2vw;
+    @media screen and (max-width:1200px) {
+        margin-left: 0;
+    }
 }
 
 .dropdown-menu {
@@ -1334,7 +1372,7 @@ h2.speaker-title{
     align-items: center;
     border-radius: 10px;
     /* border: 3px dashed white; */
-    color: white;
+    color: #0434b4;
     padding: 2px;
     width: 1vw ;
     height: auto;
@@ -1350,7 +1388,7 @@ h2.speaker-title{
 }
 
 .blue {
-    color: #0434b4;
+    color: #fff;
 }
 
 .committee-person .committee-person-info {
@@ -1364,12 +1402,12 @@ h2.speaker-title{
 
 .committee-person:hover  .committee-person-info  {
     max-height: 10vw;
-    color: #fff;
+    color: #0434b4;
 }
 
 .committee-person:hover  .committee-person-info.blue  {
     max-height: 10vw;
-    color: #0434b4;
+    color: #fff;
 }
 
 .committee-title {
@@ -1378,7 +1416,7 @@ h2.speaker-title{
     padding-bottom: 20px;
     font-family: 'Poppins', sans-serif; 
     font-weight: 700; 
-    color:white;
+    color:#0434b4;
 
     @media screen and (max-width:576px){
         font-size: 10vw;
