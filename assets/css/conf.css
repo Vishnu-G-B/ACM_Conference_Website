@@ -299,23 +299,6 @@ section.footer-section.bg-drkblue {
     };
 }
 
-@media screen and (max-width:567px) {
-    .mahe-logo img{
-        width: 90vw;
-        height: auto;
-    }
-    
-    .acm-logo img {
-        width: 90vw;
-        height: auto;
-    }
-    
-    .tNf-logo img {
-        width: 90vw;
-        height: auto;
-    }
-}
-
 @media screen and (max-width:1300px) {
     .mahe-logo img{
         width: 30vw;
@@ -349,6 +332,24 @@ section.footer-section.bg-drkblue {
         height: 200px;
     }
 }
+
+@media screen and (max-width:567px) {
+    .mahe-logo img{
+        width: 90vw;
+        height: auto;
+    }
+    
+    .acm-logo img {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .tNf-logo img {
+        width: 90vw;
+        height: auto;
+    }
+}
+
 
 
 .about h1 {
