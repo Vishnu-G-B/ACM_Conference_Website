@@ -170,7 +170,7 @@ function changeLogoOnScroll() {
   const nav = document.getElementById('navbar');
   const imgLogo = document.getElementById('changingImg');
   try {
-    if (document.title === "CODE-AI:CFP"){
+    if (document.title === "CODE-AI:CFP" || document.title == "CODE-AI:Registration" ){
       if(nav.classList.contains('scrolled')){
         imgLogo.src = "assets/img/dark-logo-new.png";
       } else {
