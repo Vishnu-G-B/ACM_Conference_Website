@@ -274,19 +274,19 @@ section.footer-section.bg-drkblue {
 
 .mahe-logo img {
     object-fit: cover;
-    width: 27vw;
+    width: 20vw;
     height: 200px;
 }
 
 .acm-logo img {
     object-fit: cover;
-    width: 27vw;
+    width: 20vw;
     height: 200px;
 }
 
 .tNf-logo img {
     object-fit: cover;
-    width: 27vw;
+    width: 20vw;
     height: 200px;
 }
 
@@ -308,34 +308,34 @@ section.footer-section.bg-drkblue {
 
 @media screen and (max-width:1300px) {
     .mahe-logo img {
-        width: 30vw;
+        width: 25vw;
         height: 200px;
     }
 
     .acm-logo img {
-        width: 30vw;
+        width: 25vw;
         height: 200px;
     }
 
     .tNf-logo img {
-        width: 30vw;
+        width: 25vw;
         height: 200px;
     }
 }
 
 @media screen and (max-width:1200px) {
     .mahe-logo img {
-        width: 35vw;
+        width: 28vw;
         height: 200px;
     }
 
     .acm-logo img {
-        width: 35vw;
+        width: 28vw;
         height: 200px;
     }
 
     .tNf-logo img {
-        width: 35vw;
+        width: 28vw;
         height: 200px;
     }
 }
@@ -599,7 +599,7 @@ p.text {
 .header-larger {
     color: #0031B0;
     font-weight: 800;
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 1.2;
 
     @media screen and (max-width:576px) {
@@ -692,10 +692,10 @@ h2.title {
 }
 
 .last-section .schedule-img img {
-    margin-left: 10vw;
-    width: 45vw;
+    margin-left: 8vw;
+    width: 50vw;
     height: auto;
-    margin-right: 2vw;
+    margin-right: -3vw;
 }
 
 @media screen and (max-width: 767px) {
