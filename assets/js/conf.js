@@ -176,6 +176,7 @@ function changeLogoOnScroll() {
       } else {
         imgLogo.src = "assets/img/light-logo-new.png";
       }
+      
     }
   } catch (error) {
     console.error("Not on CFP page", error.message);
