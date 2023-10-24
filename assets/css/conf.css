@@ -141,6 +141,7 @@ section.footer-section.bg-drkblue {
 .navbar-nav .nav-item a.nav-link-white {
     color: #0434b4;
     text-decoration: none;
+
     @media screen and (min-width:1402px) {
         color: white;
     }
@@ -620,6 +621,15 @@ p.text {
 h2.title {
     font-size: 4vw;
     padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+h3.title {
+    font-size: 2.5vw;
+    /* padding-top: 20px; */
     padding-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -1277,7 +1287,7 @@ div.text-container.mobile-reverse {
 }
 
 div.text-container.left {
-    margin-left: -20vw;
+    margin-left: -25vw;
 
     @media screen and (max-width:567px) {
         margin-left: 0;
@@ -1285,7 +1295,7 @@ div.text-container.left {
 }
 
 div.text-container.right {
-    margin-right: -35vw;
+    margin-right: -25vw;
 
     @media screen and (max-width:567px) {
         margin-right: 0;
@@ -1299,8 +1309,8 @@ div.text-container.right {
 }
 
 .logo-holder img {
-    width: 20vw;
-    height: 10vw;
+    width: 27vw;
+    height: 20vw;
     object-fit: cover;
     border-radius: 30px;
 
@@ -1331,6 +1341,51 @@ div.text-container.right {
     text-align: justify;
 }
 
+.INPtext a{
+    text-decoration: none;
+    color: #c5c6f6;
+}
+
+.INPtext a:hover{
+    color: #add8e6;
+}
+
+.INPtext a:visited{
+    color: #a99999;
+}
+
+blockquote {
+    font-weight: 300;
+    font-size: 1.75vw;
+    max-width: 700px;
+    line-height: 1.4;
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 0.5rem;
+    color: white;
+    text-align: justify;
+}
+
+blockquote:before,
+blockquote:after {
+    position: absolute;
+    color: #f1efe6;
+    font-size: 8rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+blockquote:before {
+    content: '“';
+    left: -5rem;
+    top: -2rem;
+}
+
+blockquote:after {
+    content: '”';
+    right: -5rem;
+    bottom: 1rem;
+}
 
 /* SPEAKER CONTENT STYLES */
 
