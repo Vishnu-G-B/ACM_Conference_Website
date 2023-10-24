@@ -1339,6 +1339,9 @@ div.text-container.right {
     font-size: large;
     color: white;
     text-align: justify;
+    @media screen and (max-width:567px) {
+        font-size: 4.5vw;
+    }
 }
 
 .INPtext a{
@@ -1347,12 +1350,9 @@ div.text-container.right {
 }
 
 .INPtext a:hover{
-    color: #add8e6;
+    color: #8adefa;
 }
 
-.INPtext a:visited{
-    color: #a99999;
-}
 
 blockquote {
     font-weight: 300;
@@ -1364,6 +1364,10 @@ blockquote {
     padding: 0.5rem;
     color: white;
     text-align: justify;
+    @media screen and (max-width:567px) {
+        max-width: 400px;
+        font-size: 4.5vw;
+    }
 }
 
 blockquote:before,
