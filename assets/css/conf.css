@@ -644,11 +644,13 @@ h3.title {
     .row {
         margin: 0;
         flex-wrap: wrap;
+        margin-top: 20px;
     }
 
     .row-mobile-reverse {
         margin: 0;
         flex-wrap: wrap;
+        margin-top: 20px;
     }
 
     p.text {
