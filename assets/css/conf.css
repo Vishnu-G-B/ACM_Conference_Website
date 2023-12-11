@@ -119,6 +119,20 @@ section.footer-section.bg-drkblue {
     background-color: white !important;
 }
 
+.right-divider{
+    border-right: 2px solid black;
+}
+
+.right-push-8 {
+    margin-left: 9vw;
+    padding-right: 30px;
+
+    @media screen and(max-width:576px){
+        margin-left: 0;
+        padding-right: 0;
+    }
+}
+
 .navbar-nav .nav-item {
     padding: 0rem 0.75rem;
     /* margin-top: 1rem; */
@@ -283,6 +297,14 @@ section.footer-section.bg-drkblue {
 
 }
 
+.box .title.landing-next{
+    font-size: 1.2vw;
+    font-weight: 600;
+    @media screen and (max-width:576px) {
+        font-size: 7vw;
+    }
+}
+
 .mahe-logo img {
     object-fit: cover;
     width: 20vw;
@@ -297,6 +319,11 @@ section.footer-section.bg-drkblue {
 
 .tNf-logo img {
     object-fit: cover;
+    width: auto;
+    height: 200px;
+}
+
+.SUPSI-logo img {
     width: 20vw;
     height: 200px;
 }
@@ -332,6 +359,10 @@ section.footer-section.bg-drkblue {
         width: 25vw;
         height: 200px;
     }
+    .SUPSI-logo img {
+        width: 25vw;
+        height: 200px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -349,6 +380,11 @@ section.footer-section.bg-drkblue {
         width: 28vw;
         height: 200px;
     }
+
+    .SUPSI-logo img {
+        width: 28vw;
+        height: 200px;
+    }
 }
 
 @media screen and (max-width:567px) {
@@ -363,6 +399,11 @@ section.footer-section.bg-drkblue {
     }
 
     .tNf-logo img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .SUPSI-logo img {
         width: 90vw;
         height: auto;
     }
