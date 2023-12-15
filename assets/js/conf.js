@@ -132,39 +132,39 @@ function removeElement() {
 
 }
 
-function changeNavListOnScroll() {
+// function changeNavListOnScroll() {
 
-  try{
-    const nav = document.getElementById('navbar')
-    const navElements = document.querySelectorAll('.nav-options');
-    const viewportWidth = window.innerWidth;
-    const className = "scrolled";
-    const lightLink = "nav-link-white";
-    const darkLink = "nav-link-blue"
+//   try{
+//     const nav = document.getElementById('navbar')
+//     const navElements = document.querySelectorAll('.nav-options');
+//     const viewportWidth = window.innerWidth;
+//     const className = "scrolled";
+//     const lightLink = "nav-link-white";
+//     const darkLink = "nav-link-blue"
 
 
-    if (nav.classList.contains(className)){
-      if(viewportWidth>992) {
-        navElements.forEach(element => {
-          if(element.classList.contains(lightLink)){
-            element.classList.remove(lightLink);
-            element.classList.add(darkLink);
-          }
-        });
-      }
-    }else {
-      navElements.forEach(element => {
-        if(element.classList.contains(darkLink)){
-          element.classList.remove(darkLink);
-          element.classList.add(lightLink);
-        }
-      });
-    }
-  } 
-  catch (error){
-    console.error("NO NAV",error.message);
-  }
-}
+//     if (nav.classList.contains(className)){
+//       if(viewportWidth>992) {
+//         navElements.forEach(element => {
+//           if(element.classList.contains(lightLink)){
+//             element.classList.remove(lightLink);
+//             element.classList.add(darkLink);
+//           }
+//         });
+//       }
+//     }else {
+//       navElements.forEach(element => {
+//         if(element.classList.contains(darkLink)){
+//           element.classList.remove(darkLink);
+//           element.classList.add(lightLink);
+//         }
+//       });
+//     }
+//   } 
+//   catch (error){
+//     console.error("NO NAV",error.message);
+//   }
+// }
 
 function changeLogoOnScroll() {
   const nav = document.getElementById('navbar');
@@ -238,7 +238,7 @@ toggleClassOnClick();
 removeElement();
 updateSVGViewBox();
 checkViewportWidth();
-changeNavListOnScroll();
+// changeNavListOnScroll();
 changeLogoOnScroll();
 
 window.addEventListener('resize',changeSVGOnMobile);
@@ -247,33 +247,33 @@ window.addEventListener('resize', removeElement);
 window.addEventListener('resize', setFontSize);
 window.addEventListener('resize', updateSVGViewBox);
 window.addEventListener('resize',checkViewportWidth)
-window.addEventListener('scroll', changeNavListOnScroll);
+// window.addEventListener('scroll', changeNavListOnScroll);
 window.addEventListener('scroll', changeLogoOnScroll);
 
 
-document.querySelectorAll(".nav-link").forEach(function(link) {
-  link.addEventListener("click", function(event) {
-    event.preventDefault();
-    var linkHref = link.getAttribute("href");
-    triggerButtonAction(linkHref);
-  });
-});
+// document.querySelectorAll(".nav-link").forEach(function(link) {
+//   link.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     var linkHref = link.getAttribute("href");
+//     triggerButtonAction(linkHref);
+//   });
+// });
 
-document.querySelector(".btn-close").addEventListener("click", function() {
-  console.log("Close button clicked!");
-});
+// document.querySelector(".btn-close").addEventListener("click", function() {
+//   console.log("Close button clicked!");
+// });
 
-document.getElementById("myButton").addEventListener("click", function() {
-  console.log("Button clicked!");
-});
+// document.getElementById("myButton").addEventListener("click", function() {
+//   console.log("Button clicked!");
+// });
 
-function triggerButtonAction(linkHref) {
-  document.getElementById("myButton").click();
+// function triggerButtonAction(linkHref) {
+//   document.getElementById("myButton").click();
 
-  setTimeout(function() {
-    window.location.href = linkHref;
-  }, 100); 
-}
+//   setTimeout(function() {
+//     window.location.href = linkHref;
+//   }, 100); 
+// }
 
 
 function changeIcon() {//REWRITE THIS FUNCTION ITS KINDA A**
