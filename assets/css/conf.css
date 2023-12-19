@@ -190,7 +190,6 @@ section.footer-section.bg-drkblue {
 
 .navbar-nav .nav-item {
     padding: 0rem 0.75rem;
-    /* margin-top: 1rem; */
     font-weight: 500;
 }
 
@@ -348,7 +347,7 @@ section.footer-section.bg-drkblue {
 
 .landing-title {
     font-weight: 800;
-    font-size: 6.5vw;
+    font-size: 5vw;
     display: inline-block;
     line-height: 1;
 }
@@ -1705,6 +1704,95 @@ h2.speaker-title {
 
 .instruction-card-scientific p {
     padding: 0 0 20px 0;
+}
+
+/* Sponsorship page styles */
+
+.sponsor-para-container {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sponsor-cards-layout{
+    display: flex;
+}
+
+.sponsor-card {
+    width: 350px;
+    height: fit-content;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Title styles */
+.sponsor-title {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+/* Divider line styles */
+.divider {
+    margin-top: -10px;
+    border-top: 2px solid #ccc;
+    margin-bottom: 5px;
+    /* width: 120%; */
+}
+
+/* Body styles */
+.sponsor-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.sponsor-range {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+}
+
+.sponsor-list {
+    list-style-type:decimal  ;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.sponsor-list li {
+    margin-bottom: 8px;
+    text-align:center;
+}
+
+.sponsor-interest {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.sponsor-interest a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.sponsor-interest a:hover {
+    color:#8adefa;
 }
 
 /* Committee Page Styles */
