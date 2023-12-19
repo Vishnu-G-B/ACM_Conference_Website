@@ -1715,10 +1715,16 @@ h2.speaker-title {
     justify-content: center;
     align-items: center;
     color: white;
+    padding: 20px;
 }
 
 .sponsor-cards-layout{
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    @media screen and (max-width:1200px) {
+        flex-wrap: wrap;
+    }
 }
 
 .sponsor-card {
@@ -2409,7 +2415,10 @@ div.wavy-divider-white .editorial {
 
 /* Awards Page styles */
 .center.lg-text {
-    font-size: 3vw;
+    font-size: 3rem;
+    @media screen and (max-width:576px) {
+        font-size: 10vw;
+    }
 }
 
 .container-awards-parent {
