@@ -753,8 +753,8 @@ section.footer-section.bg-drkblue {
 }
 
 .img-container.logo img {
-    width: 35vw;
-    height: 65vh;
+    width: 45vw;
+    height: auto;
 }
 
 p.text {
@@ -823,11 +823,12 @@ h3.title {
     }
 
     .img-container.logo img {
-        width: 50vw;
+        width: 100vw;
         max-width: 100%;
         min-width: 245px;
-        min-height: 350px;
         height: auto;
+        margin-bottom: -50px;
+        margin-top: -20px;
     }
 
     .img-container.conf-logo .image {
