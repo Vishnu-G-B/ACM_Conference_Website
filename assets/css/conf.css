@@ -72,15 +72,16 @@ section.footer-section.bg-drkblue {
     width: 100vw;
     /* overflow: hidden; */
     animation: moveBanner 25s linear infinite;
+
     /* Adjust the duration as needed */
-    @media screen and (max-width:576px){
+    @media screen and (max-width:576px) {
         animation: moveBanner 10s linear infinite;
     }
 }
 
 .moving-banner p {
     margin-top: -2px;
-    width:fit-content
+    width: fit-content
 }
 
 @keyframes moveBanner {
@@ -94,10 +95,11 @@ section.footer-section.bg-drkblue {
 }
 
 @media screen and (max-width:576px) {
-    @keyframes moveBanner{
-        0%{
+    @keyframes moveBanner {
+        0% {
             transform: translateX(100%);
         }
+
         100% {
             transform: translateX(-150%);
         }
@@ -268,23 +270,95 @@ section.footer-section.bg-drkblue {
 
 .navbar-brand {
     padding: 0;
-    margin-left: 15px;
+    margin-right: 0;
 }
 
 .navbar-brand img {
-    width: 280px;
+    width: 19vw;
     height: 80px;
     object-fit: contain;
     /* margin-top: -25px; */
 
     @media screen and (max-width:576px) {
-        width: 200px;
-        height: auto;
-        object-fit: fill;
-        margin-top: -15px;
+        width: 55vw;
+        height: 100px;
+        object-fit: cover;
+        /* margin-top: -15px; */
         margin-left: -20px;
 
     }
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: transparent;
+    /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 90vw;
+    @media screen and (max-width:1100px) {
+        width: 88vw;
+    }
+    @media screen and (max-width:576px) {
+        width: 75vw;
+    }
+    @media screen and (max-width:350px) {
+        width: 70vw;
+    }
+}
+
+.slider::before,
+.slider::after {
+    /* background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); */
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.ml-n {
+    margin-left: -20px;
+    margin-right: 0;
 }
 
 .image-list {
@@ -297,32 +371,59 @@ section.footer-section.bg-drkblue {
 .image-list-item {
     display: inline-block;
     margin-right: 10px;
+
     @media screen and (max-width:576px) {
         margin-right: 0;
     }
+
     /* Adjust as needed for spacing */
+}
+
+.image-list-item-codeAI img{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .image-list-item-tNf img {
     object-fit: cover;
     border-radius: 20px;
     margin-top: 1px;
+    
+    @media screen and (max-width:576px){
+        height: 100px;
+    }
 }
 
 .image-list-item-linnaeus img {
     /* width: 300px; */
     object-fit: cover;
     /* margin-left: -1vw; */
+    /* @media screen and (max-width:1100px) {
+        width: ; 
+    } */
+    @media screen and (max-width:576px){
+        height: 100px;
+    }
 }
 
 .image-list-item.supsi img {
     width: 190px;
     /* margin-left: -1.5vw; */
+    margin-right: -2.5vw;
+    object-fit: fill;
+    @media screen and (max-width:576px){
+        height: 100px;
+        margin-right: 0;
+    }
 }
 
 .image-list-item-scopus img {
     object-fit: cover;
     margin-top: 5px;
+    margin-right: -3vw;
+    @media screen and (max-width:576px){
+        height: 100px;
+    }
 }
 
 .navbar-brand img.light-logo {
@@ -910,10 +1011,12 @@ h3.title {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        min-height: 0px ;
+        margin-top: 30px;
     }
 
     .last-section .schedule-img img {
-        width: 90vw;
+        width: 110vw;
         height: auto;
         margin-left: 0;
         margin-right: 0;
@@ -987,6 +1090,9 @@ section.bg-skewedwhite {
     font-size: 4rem;
     font-weight: 800;
     color: #0434b4;
+    @media screen and (max-width:576px) {
+        font-size: 2.5rem;
+    }
 }
 
 ol.list-parent {
@@ -1117,6 +1223,10 @@ section.timeline-section {
     min-height: 0;
 }
 
+.timeline-index {
+    padding-bottom: 80px;
+}
+
 .timeline {
     display: flex;
     flex-direction: column;
@@ -1176,12 +1286,12 @@ section.timeline-section {
 }
 
 .timeline__event__title {
-    font-size: 2.2vw;
-    line-height: 1.2;
+    font-size: 1.5vw;
+    /* line-height: 1.2; */
     text-transform: uppercase;
     font-weight: 600;
     color: #0434b4;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1.5px; */
 }
 
 .timeline__event__content {
@@ -1492,6 +1602,7 @@ div.text-container.right {
 
 }
 
+
 .text-holder {
     display: flex;
     align-items: center;
@@ -1737,9 +1848,10 @@ h2.speaker-title {
     padding: 20px;
 }
 
-.sponsor-cards-layout{
+.sponsor-cards-layout {
     display: flex;
     justify-content: center;
+
     /* align-items: center; */
     @media screen and (max-width:1200px) {
         flex-wrap: wrap;
@@ -1789,7 +1901,7 @@ h2.speaker-title {
 }
 
 .sponsor-list {
-    list-style-type:decimal  ;
+    list-style-type: decimal;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -1798,7 +1910,7 @@ h2.speaker-title {
 
 .sponsor-list li {
     margin-bottom: 8px;
-    text-align:center;
+    text-align: center;
 }
 
 .sponsor-interest {
@@ -1809,7 +1921,7 @@ h2.speaker-title {
     margin-left: -20px;
 }
 
-.sponsor-interest a{
+.sponsor-interest a {
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -1817,7 +1929,7 @@ h2.speaker-title {
 }
 
 .sponsor-interest a:hover {
-    color:#8adefa;
+    color: #8adefa;
 }
 
 /* Committee Page Styles */
@@ -2435,6 +2547,7 @@ div.wavy-divider-white .editorial {
 /* Awards Page styles */
 .center.lg-text {
     font-size: 3rem;
+
     @media screen and (max-width:576px) {
         font-size: 10vw;
     }
