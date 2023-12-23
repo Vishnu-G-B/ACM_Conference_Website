@@ -70,13 +70,17 @@ section.footer-section.bg-drkblue {
     color: hsl(197, 100%, 85%);
     z-index: 9;
     width: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
     animation: moveBanner 25s linear infinite;
     /* Adjust the duration as needed */
+    @media screen and (max-width:576px){
+        animation: moveBanner 10s linear infinite;
+    }
 }
 
 .moving-banner p {
     margin-top: -2px;
+    width:fit-content
 }
 
 @keyframes moveBanner {
@@ -86,6 +90,17 @@ section.footer-section.bg-drkblue {
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width:576px) {
+    @keyframes moveBanner{
+        0%{
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-150%);
+        }
     }
 }
 
@@ -282,6 +297,9 @@ section.footer-section.bg-drkblue {
 .image-list-item {
     display: inline-block;
     margin-right: 10px;
+    @media screen and (max-width:576px) {
+        margin-right: 0;
+    }
     /* Adjust as needed for spacing */
 }
 
