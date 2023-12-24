@@ -193,6 +193,9 @@ section.footer-section.bg-drkblue {
 
 .right-divider {
     border-right: 2px solid black;
+    @media screen and (max-width:576px) {
+        border-right: none;
+    }
 }
 
 .box.right-push-8 {
@@ -380,14 +383,19 @@ section.footer-section.bg-drkblue {
 }
 
 .image-list-item-codeAI img{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: -1vw;
+    @media screen and (max-width:576px) {
+        object-fit:contain ;
+        margin-right: -2.5vw;
+        width: 85vw;
+    }
 }
 
 .image-list-item-tNf img {
     object-fit: cover;
     border-radius: 20px;
     margin-top: 1px;
+    margin-right: -1vw;
     
     @media screen and (max-width:576px){
         height: 100px;
@@ -395,12 +403,8 @@ section.footer-section.bg-drkblue {
 }
 
 .image-list-item-linnaeus img {
-    /* width: 300px; */
     object-fit: cover;
-    /* margin-left: -1vw; */
-    /* @media screen and (max-width:1100px) {
-        width: ; 
-    } */
+    margin-right: -1vw;
     @media screen and (max-width:576px){
         height: 100px;
     }
@@ -409,7 +413,7 @@ section.footer-section.bg-drkblue {
 .image-list-item.supsi img {
     width: 190px;
     /* margin-left: -1.5vw; */
-    margin-right: -2.5vw;
+    margin-right: -1vw;
     object-fit: fill;
     @media screen and (max-width:576px){
         height: 100px;
@@ -418,11 +422,14 @@ section.footer-section.bg-drkblue {
 }
 
 .image-list-item-scopus img {
+    width: 15vw;
     object-fit: cover;
     margin-top: 5px;
     margin-right: -3vw;
     @media screen and (max-width:576px){
         height: 100px;
+        margin-right: -11.5vw;
+        width: 55vw;
     }
 }
 
@@ -632,22 +639,22 @@ section.footer-section.bg-drkblue {
 
 @media screen and (max-width:567px) {
     .mahe-logo img {
-        width: 90vw;
+        width: 60vw;
         height: auto;
     }
 
     .acm-logo img {
-        width: 90vw;
+        width: 60vw;
         height: auto;
     }
 
     .tNf-logo img {
-        width: 90vw;
+        width: 60vw;
         height: auto;
     }
 
     .SUPSI-logo img {
-        width: 90vw;
+        width: 60vw;
         height: auto;
     }
 }
