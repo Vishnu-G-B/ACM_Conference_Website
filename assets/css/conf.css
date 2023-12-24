@@ -465,6 +465,7 @@ section.footer-section.bg-drkblue {
         height: 100px;
         margin-right: -8vw;
         width: 50vw;
+        margin-top: 5px;
     }
     @media screen and (max-width:350px) {
         margin-right: -9vw;
