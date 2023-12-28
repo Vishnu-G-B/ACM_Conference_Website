@@ -393,6 +393,10 @@ section.footer-section.bg-drkblue {
 .image-list-item-codeAI img{
     margin-right: -1vw;
     
+    @media screen and (max-width:1350px) {
+        margin-right: -0.3vw;
+    }
+
     @media screen and (max-width:1100px) {
         margin-right: 0;
     }
@@ -458,6 +462,9 @@ section.footer-section.bg-drkblue {
     object-fit: cover;
     margin-top: 10px;
     margin-right: -3.5vw;
+    @media screen and (max-width:1370px) {
+        margin-right: -2.75vw;
+    }
     @media screen and (max-width:1100px) {
         margin-right: -1.5vw;
     }
