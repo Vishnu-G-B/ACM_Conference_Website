@@ -3533,3 +3533,25 @@ h2.platinum.title {
     height: auto;
   }
 }
+
+.topinfo {
+  width: 100vw;
+  height: 1.6rem;
+  background-color: #0434b4;
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+  border: 2px white dashed;
+  /* align-self:; */
+  /* padding-bottom: 10px; */
+  margin-top: -8px;
+}
+
+.infoPara {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  @media screen and (max-width:479px){
+    font-size: 0.9rem;
+  }
+}
