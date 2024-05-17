@@ -89,7 +89,7 @@ function setFontSize() {
     
     if (screenWidth >789 ){
       textElements.forEach(element => {
-        element.style.fontSize = baseFontSize * 1.4 + 'px'; 
+        element.style.fontSize = baseFontSize * 1.3 + 'px'; 
       });
     }
 
