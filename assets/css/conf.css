@@ -3467,6 +3467,7 @@ div.wavy-divider-white .editorial {
 
 .technical-sponsor-logo.CGI img {
   height: 150px;
+  object-fit: contain;
 }
 
 .technical-sponsor-logo-container img {
