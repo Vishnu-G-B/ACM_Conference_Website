@@ -685,6 +685,7 @@ section.footer-section.bg-drkblue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -802,8 +803,8 @@ section.footer-section.bg-drkblue {
 }
 
 .acm-logo img {
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
   width: 20vw;
   height: 200px;
 }
@@ -3504,7 +3505,7 @@ h2.platinum.title {
 .platinum-sponsor-desc {
   width: 50vw;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: justify;
   padding-right: 80px;
   padding-left: 0px;
