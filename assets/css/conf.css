@@ -3515,8 +3515,8 @@ h2.platinum.title {
     font-size: 1rem;
     margin-top: -25px;
   }
-  @media screen and (min-width:1441px) {
-    font-size: 2rem;
+  @media screen and (min-width:1900px) {
+    font-size: 2.2rem;
   }
 }
 
@@ -3536,16 +3536,15 @@ h2.platinum.title {
   height: 400px;
   object-fit: contain;
   padding: 25px;
-  /* border-radius: 10px; */
-  /* border: 2px dashed white; */
   background-color: white;
   @media screen and (max-width:479px) {
     width: 90vw;
     height: auto;
   }
-  @media screen and (min-width:1441px) {
-    width: 650px;
-    height: 550px;
+  @media screen and (min-width:2100px) {
+    padding: 45px;
+    width: 700px;
+    height: 600px;
   }
 }
 
