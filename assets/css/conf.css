@@ -3515,6 +3515,9 @@ h2.platinum.title {
     font-size: 1rem;
     margin-top: -25px;
   }
+  @media screen and (min-width:1441px) {
+    font-size: 2rem;
+  }
 }
 
 .platinum-sponsor-logo-container {
@@ -3532,13 +3535,17 @@ h2.platinum.title {
   width: 500px;
   height: 400px;
   object-fit: contain;
-  padding: 10px;
+  padding: 25px;
   /* border-radius: 10px; */
   /* border: 2px dashed white; */
   background-color: white;
   @media screen and (max-width:479px) {
     width: 90vw;
     height: auto;
+  }
+  @media screen and (min-width:1441px) {
+    width: 650px;
+    height: 550px;
   }
 }
 
