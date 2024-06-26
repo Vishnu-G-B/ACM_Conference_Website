@@ -46,6 +46,9 @@ section.footer-section.bg-drkblue {
 
 .carousel-inner .carousel-item .carousel-caption {
   bottom: 3.5rem;
+  @media screen and (max-width: 479px) {
+    bottom: 0;
+  }
 }
 
 .moving-banner-container {
@@ -3588,4 +3591,17 @@ h2.platinum.title {
   @media screen and (max-width: 479px) {
     font-size: 0.9rem;
   }
+}
+
+.progSched-link .title-full {
+  color: white; /* Base color */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.progSched-link:hover .title-full {
+  color: #8adefa; /* Color on hover */
+}
+
+.progSched-link:active .title-full {
+  color: darkblue; /* Color on click */
 }
